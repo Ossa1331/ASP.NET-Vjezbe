@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Contact page";
+}
+<h1>@ViewData["Title"]</h1>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<p>Podaci koji su proslijeđeni iz controller-a: @ViewData["Message"]</p>
+
+<button type="button" class="btn btn-primary" id="modal-toggle-button" data-toggle="modal" data-target="#contactModal">
+    Otvori
+</button>
+
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Kontakt forma</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/Home/SubmitQuery">
+                    <div class="form-group">
+                        <label for="ime">Ime i prezime:</label>
+                        <input type="text" class="form-control" id="ime" name="ime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="poruka">Poruka:</label>
+                        <textarea class="form-control" id="poruka" name="poruka" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipPoruke">Tip poruke:</label>
+                        <select class="form-control" id="tipPoruke" name="tipPoruke">
+                            <option value="pohvala">Pohvala</option>
+                            <option value="upit">Upit</option>
+                            <option value="poslovniPrijedlog">Poslovni prijedlog</option>
+                            <option value="zalba">Žalba</option>
+                        </select>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                        <label class="form-check-label" for="newsletter">Primati newsletter</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Pošalji</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

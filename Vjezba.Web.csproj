@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Class.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Clients\Index1.cshtml" />
+    <Content Remove="Views\Client\Index1.cshtml" />
+    <Content Remove="Views\Home\Index1.cshtml" />
+    <Content Remove="Views\Home\Index2.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>

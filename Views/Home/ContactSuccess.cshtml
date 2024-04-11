@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "ContactSuccess";
+}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.cshtml">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Contact</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Trenutna stranica</li>
+    </ol>
+</nav>
+
+<body>
+    <h2>Notification</h2>
+    <p class="alert alert-success" role="alert">@ViewBag.Notification</p>
+</body>

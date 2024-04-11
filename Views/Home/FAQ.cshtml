@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "FAQ";
+}
+
+<h2>Frequently Asked Questions</h2>
+
+<ul>
+    <li><a href="@Url.Action("FAQ", "Home", new { selected = 1 })" style="font-weight: @(ViewBag.SelectedQuestion == 1 ? "bold" : "normal")">P1: Postoji li povrat novca?
+        <ul>Ukoliko je proizvod neispravan, a uključen je garanciju, možete zatražiti povrat novca.</ul>
+    </a></li>
+    <li><a href="@Url.Action("FAQ", "Home", new { selected = 2 })" style="font-weight: @(ViewBag.SelectedQuestion == 2 ? "bold" : "normal")">P2: Koliko se plaća dostava?
+        <ul> Dostava je besplatna unutar članica Europske Unije, za ostale države dostava se plaća 1.00$ po kilogramu.</ul>
+    </a></li>
+    <li><a href="@Url.Action("FAQ", "Home", new { selected = 3 })" style="font-weight: @(ViewBag.SelectedQuestion == 3 ? "bold" : "normal")">P3: u kojim državama dostavljate proizvode?
+        <ul>Dostavljamo na području članica Euroazije.</ul>
+    </a></li>
+    <li><a href="@Url.Action("FAQ", "Home", new { selected = 4 })" style="font-weight: @(ViewBag.SelectedQuestion == 4 ? "bold" : "normal")">P4: Postoji li garancija na vaše proizvode? 
+        <ul> Svaki proizvod ima svoju garanciju otisnutu na pakiranju, za daljnje upute molim vas pročitati garantni list</ul>
+    </a></li>
+    <li><a href="@Url.Action("FAQ", "Home", new { selected = 5 })" style="font-weight: @(ViewBag.SelectedQuestion == 5 ? "bold" : "normal")">P5: Kako se može s vama stupiti u kontakt?
+        <ul>Možete na poslati Email koji možete vidjeti na Kontakt stranici, ili preko telefonskog poziva.</ul>
+    </a></li>
+</ul>
